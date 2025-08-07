@@ -15,14 +15,14 @@ The design performs modular multiplication using the following flow:
 
 ## Top-Level Module: `hybrid_montgomery.sv`
 
-### ### Parameters
+### Parameters
 | Parameter | Description |
 |----------|-------------|
 | `N`      | Operand bit-width (e.g., 1024 bits) |
 | `W`      | Word size (e.g., 32 bits per coefficient) |
 | `P`      | Prime modulus used for NTT (e.g., 12289) |
 
-### ### I/O Ports
+### I/O Ports
 | Port    | Direction | Description |
 |---------|-----------|-------------|
 | `clk`   | Input     | Clock signal |
