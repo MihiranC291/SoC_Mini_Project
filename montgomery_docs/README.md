@@ -61,7 +61,7 @@ The design performs modular multiplication using the following flow:
 - Recovers time-domain result
 
 
-## 🛠Simulation & Testing
+## Simulation & Testing
 
 This project is structured for simulation on various tools, such as Xilinx Vivado, and EDA Playground.
 
