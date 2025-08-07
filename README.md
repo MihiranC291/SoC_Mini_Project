@@ -22,3 +22,9 @@ Step 3: Iterate over bits. For each bit bi of B from least to most significant,
 * Compute updated T.
 Step 4: If T>= M, subtract M from it to ensure that the output is within the limit [0, M-1]
 
+## Repo Content
+`montgomery_docs`
+* Design file `hybrid_montgomery.sv`
+* Testbench file `tb_hybrid_montgomery.sv`
+* README.md file with further explanation
+
