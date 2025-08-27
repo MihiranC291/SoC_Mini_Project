@@ -1,0 +1,21 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Checkout') {
+            steps {
+                git branch: 'main', url: 'https://github.com/your/repo.git'
+            }
+        }
+        stage('Synthesis & Simulation') {
+            steps {
+                sh 'vivado -mode batch -source tcl/synth_and_sim.tcl'
+            }
+        }
+        stage('Archive Results') {
+            steps {
+                archiveArtifacts artifacts: 'sim_waveform.wdb', fingerprint: true
+            }
+        }
+    }
+}

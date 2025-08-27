@@ -1,0 +1,14 @@
+# Create a project for synthesis + simulation
+create_project montgomery_proj ./vivado_proj -part xc7z020clg400-1
+add_files [list ./hybrid_montgomery.sv ./tb_hybrid_montgomery.sv]
+set_property top tb_hybrid_montgomery [get_filesets sim_1]
+
+# Run synthesis
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+
+# Run simulation
+launch_simulation
+run all
+write_waveform -force ./sim_waveform.wdb
+quit
